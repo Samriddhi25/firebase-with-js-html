@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My site</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style=" background-image: url(assests.png); text-align: center;">
+
+  <div id="login_div" class="main-div">
+    <h3> Welcome to Samriddhi's Site</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()" style="border-radius: 45%; margin-left: 15px;">Login to Account</button>
+    <br>
+    <button onclick="sign()" style="border-radius: 45%; margin-left: 15px;">SignUp for new Account </button>
+  </div>
+
+  <div id="signup_div" class="main-div">
+    <h3>Signup </h3>
+    <input type="email" placeholder="Email..." id="email" />
+    <input type="password" placeholder="Password..." id="password" />
+
+    <button onclick="signup()" style="border-radius: 45%; margin-left: 15px;">Confirm</button>
+  </div>
+
+
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para"></p>
+    <button onclick="dash()" style="border-radius: 45%; margin-left: 15px;">Move to dashboard</button>
+    <br>
+    <button onclick="logout()" style="border-radius: 45%; margin-left: 15px;">Logout</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAn_zfeJpqTFa5OlRoVGPeHJOVaPxiv0IE",
+      authDomain: "zila-707d0.firebaseapp.com",
+      databaseURL: "https://zila-707d0.firebaseio.com",
+      projectId: "zila-707d0",
+      storageBucket: "zila-707d0.appspot.com",
+      messagingSenderId: "236466322627",
+      appId: "1:236466322627:web:3505d768762eba861d7676",
+      measurementId: "G-EPXWCJSW42"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    var db = firebase.firestore();
+  </script>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
